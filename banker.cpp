@@ -1,3 +1,9 @@
+// Zachary Schupbach
+// 11/23/25
+// This program implements bankers algorithm to print if a process
+// is completable with given resources in a file.
+
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -83,17 +89,17 @@ int main() {
             }
 
             if (!found) {
-                cout << "Systems not safe\n";
-                return 0;
+                cout << "Systems not safe\n\n";
                 notFound = true;
+                break;
             }
         }
-        if (notFound = false){
+        if (notFound == false){
             cout << "Systems in a safe state \n Safe sequence: ";
             for (int p : safe)
                 cout << "P" << p << " ";
 
-            cout << endl;
+            cout << endl << "\n";
         }
     }
     return 0;
